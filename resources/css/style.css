@@ -1,0 +1,17 @@
+html {
+	font-size: 14px;
+}
+
+body {
+	font-family: "Work Sans", sans-serif;
+    background-color: rgba(255, 242, 242);
+}
+
+h1, h3 {
+	color: rgba(32, 64, 86);
+}
+
+p {
+	color: rgba(74, 74, 74);
+	font-weight: normal;
+}
