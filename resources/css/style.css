@@ -1,5 +1,5 @@
 html {
-	font-size: 14px;
+	font-size: 4px;
 }
 
 body {
@@ -13,5 +13,4 @@ h1, h3 {
 
 p {
 	color: rgba(74, 74, 74);
-	font-weight: normal;
 }
