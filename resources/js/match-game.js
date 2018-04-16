@@ -16,14 +16,14 @@ myCards.push(i);
 myCards.push(i); 
 }
 var C = 1;
-while (C < 9){
-console.log(+C);
+while (C < 17){
+console.log();
 C = C + 1;
-
+console.log(myCards.Math.floor(Math.random()*17));
 }
 
-
-}; 
+var CardVal = [];
+}
 /*
   Converts card values to jQuery card objects and adds them to the supplied game
   object.
