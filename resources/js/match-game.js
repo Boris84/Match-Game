@@ -15,10 +15,9 @@ for (var i = 1; i < 9; i++){
 myCards.push(i);
 myCards.push(i); 
 }
-var C = 1;
-while (C < 17){
+var myCards = 1; while (myCards < 17) {
 console.log();
-C = C + 1;
+myCards = myCards + 1;
 console.log(myCards.Math.floor(Math.random()*17));
 }
 
