@@ -21,6 +21,7 @@ while (myCards.length > 0) {
   var removePush = myCards.splice(randomIndex, 1)[0]; 
   roa.push(myCards);
 }
+roa.push(myCards[randomIndex]);
 }
 /*
   Converts card values to jQuery card objects and adds them to the supplied game
