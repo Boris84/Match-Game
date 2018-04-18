@@ -12,16 +12,15 @@ var MatchGame = {};
 MatchGame.generateCardValues = function() {
 var myCards = [];
 for (var i = 1; i < 9; i++){
-myCards.push(i);
-myCards.push(i); 
+  myCards.push(i);
+  myCards.push(i); 
 }
-var myCards = 1; while (myCards < 17) {
-console.log();
-myCards = myCards + 1;
-console.log(myCards.Math.floor(Math.random()*17));
+var roa = [];
+while (myCards.length > 0) {
+  var randomIndex = Math.floor(Math.random() * myCards.length);
+  var removePush = myCards.splice(randomIndex, 1)[0]; 
+  roa.push(myCards);
 }
-
-var CardVal = [];
 }
 /*
   Converts card values to jQuery card objects and adds them to the supplied game
