@@ -17,11 +17,11 @@ for (var i = 1; i < 9; i++){
 }
 var roa = [];
 while (myCards.length > 0) {
-  var randomIndex = Math.floor(Math.random() * myCards.length);
-  var removePush = myCards.splice(randomIndex, 1)[0]; 
-  roa.push(myCards);
+var randomIndex = Math.floor(Math.random() * myCards.length);
+  // var removePush = myCards.splice(randomIndex, 1)[0]; 
+  roa.push(myCards[randomIndex]);
 }
-roa.push(myCards[randomIndex]);
+  roa.splice(myCards[randomIndex]);
 }
 /*
   Converts card values to jQuery card objects and adds them to the supplied game
