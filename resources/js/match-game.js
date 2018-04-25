@@ -32,7 +32,13 @@ MatchGame.generateCardValues = function() {
 */
 
 MatchGame.renderCards = function(cardValues, $game) {
-
+  $game.empty();
+  for (var i = 0; i < cardValues.length;  i++) {
+  	$(document).ready(function) {
+  	$('.card col-xs-3 col-sm-3 col-md-3 col-lg-3');
+  	
+  	});
+  }
 };
 
 /*
