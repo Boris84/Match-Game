@@ -33,12 +33,13 @@ MatchGame.generateCardValues = function() {
 
 MatchGame.renderCards = function(cardValues, $game) {
   $game.empty();
-  
+  var color = ['hsl(25,85%,65%)','hsl(55,85%,65%)','hsl(90,85%,65%)','hsl(160,85%,65%',
+  'hsl(220,85%,65%)','hsl(265,85%,65%)','hsl(310,85%,65%)','hsl(360,85%,65%)'];
   for (var i = 0; i < cardValues.length;  i++) {
     var $newCard = $('<div class="card col-xs-3 col-sm-3 col-md-3 col-lg-3"> </div>')
     $newCard.data('value', cardValues[i]);
     $newCard.data('isFlipped', false);
-     
+    $newCard.data('color', [cardValues[i]-1]);
    }
 }
 
