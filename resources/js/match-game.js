@@ -33,13 +33,14 @@ MatchGame.generateCardValues = function() {
 
 MatchGame.renderCards = function(cardValues, $game) {
   $game.empty();
+  
   for (var i = 0; i < cardValues.length;  i++) {
-  	$(document).ready(function) {
-  	$('.card col-xs-3 col-sm-3 col-md-3 col-lg-3');
-  	
-  	});
-  }
-};
+    var $newCard = $('<div class="card col-xs-3 col-sm-3 col-md-3 col-lg-3"> </div>')
+    $newCard.data('value', cardValues[i]);
+    $newCard.data('isFlipped', false);
+     
+   }
+}
 
 /*
   Flips over a given card and checks to see if two cards are flipped over.
@@ -48,4 +49,4 @@ MatchGame.renderCards = function(cardValues, $game) {
 
 MatchGame.flipCard = function($card, $game) {
 
-};
+}
