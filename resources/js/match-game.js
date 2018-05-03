@@ -55,8 +55,10 @@ MatchGame.renderCards = function(cardValues, $game) {
  */
 
 MatchGame.flipCard = function($card, $game) {
- if ($card.data('isFlipped') === true) {
+  if ($card.data('isFlipped') === true) {
 
-   return 
+     return ;
  }
+     
+     $card.css('background-color', $card.data('color'));
 }
