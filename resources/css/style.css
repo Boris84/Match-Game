@@ -37,7 +37,7 @@ p {
     background-color: rgba(32, 64, 86);
 }
 
-number {
+.card {
 	font-size: 7rem;
 	font-weight: 900;
 	padding-top: 1rem;

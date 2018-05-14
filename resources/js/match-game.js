@@ -45,9 +45,13 @@ MatchGame.renderCards = function(cardValues, $game) {
       $newCard.data('value', cardValues[i]);
       $newCard.data('isFlipped', false);
       $newCard.data('color', color[cardValues[i]-1]);
-      $game.append($newCard);
+      $game.append($newCard).on('click', function() {
+        MatchGame.flipCard(($newCard), $('#game'));
+          $(this)
+      });
+} 
+
    }
-}
 
 /*
   Flips over a given card and checks to see if two cards are flipped over.
@@ -58,34 +62,34 @@ MatchGame.flipCard = function($card, $game) {
   
   if ($card.data('isFlipped') === true) {
 
-     return ;
- }
-     var fCards = $game.data('flippedCards');
-     $card.css('background-color', $card.data('color'));
-     $card.text($card.data('value'));
-     $card.data('isFlipped', true);
-     $game.data('flippedCards').push($card);
+    return;
+  }
+  var fCards = $game.data('flippedCards');
+  $card.css('background-color', $card.data('color'));
+  $card.text($card.data('value'));
+  $card.data('isFlipped', true);
+  $game.data('flippedCards').push($card);
      
   if (fCards.length === 2) {
 
-  if (fCards[0].data('value') === fCards[1].data('value')) {
+    if (fCards[0].data('value') === fCards[1].data('value')) {
       
-     fCards[0].css('background-color', rgb(153, 153, 153));
-     fCards[0].css('color', rgb(204, 204, 204));
-     fCards[1].css('background-color', rgb(153, 153, 153));
-     fCards[1].css('color', rgb(204, 204, 204));
+      fCards[0].css('background-color', rgb(153, 153, 153));
+      fCards[0].css('color', rgb(204, 204, 204));
+      fCards[1].css('background-color', rgb(153, 153, 153));
+      fCards[1].css('color', rgb(204, 204, 204));
     
- } else if (fCards[0].data('value') !== fCards[1].data('value')) {
+    } else {
 
-     fCards[0].css('background-color');
-     fCards[0].text('');
-     fCards[0].data('isFlipped', false);
-     fCards[1].css('background-color');
-     fCards[1].text('');
-     fCards[1].data('isFlipped', false);
+      fCards[0].css('background-color');
+      fCards[0].text('');
+      fCards[0].data('isFlipped', false);
+      fCards[1].css('background-color');
+      fCards[1].text('');
+      fCards[1].data('isFlipped', false);
 
- }
-
-     }
+    }
+    $game.data('flippedCards', []);
+  }
 
 }
