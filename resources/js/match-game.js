@@ -82,10 +82,10 @@ MatchGame.flipCard = function($card, $game) {
     
     } else {
 
-      fCards[0].css('background-color');
+      fCards[0].css('background-color', 'rgba(32, 64, 86)');
       fCards[0].text('');
       fCards[0].data('isFlipped', false);
-      fCards[1].css('background-color');
+      fCards[1].css('background-color', 'rgba(32, 64, 86)');
       fCards[1].text('');
       fCards[1].data('isFlipped', false);
 
