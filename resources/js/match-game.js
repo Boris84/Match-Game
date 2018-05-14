@@ -45,11 +45,12 @@ MatchGame.renderCards = function(cardValues, $game) {
       $newCard.data('value', cardValues[i]);
       $newCard.data('isFlipped', false);
       $newCard.data('color', color[cardValues[i]-1]);
-      $game.append($newCard).on('click', function() {
-        MatchGame.flipCard(($newCard), $('#game'));
-          $(this)
-      });
+      $game.append($newCard);
 } 
+$('.card').on('click', function() {
+        MatchGame.flipCard($(this), $('#game'));
+  
+      });
 
    }
 
