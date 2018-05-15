@@ -41,7 +41,7 @@ MatchGame.renderCards = function(cardValues, $game) {
   var color = ['hsl(25,85%,65%)','hsl(55,85%,65%)','hsl(90,85%,65%)','hsl(160,85%,65%)',
   'hsl(220,85%,65%)','hsl(265,85%,65%)','hsl(310,85%,65%)','hsl(360,85%,65%)'];
   for (var i = 0; i < cardValues.length;  i++) {
-  var $newCard = $('<div class="card col-xs-3 col-sm-3 col-md-3 col-lg-3"> </div>')
+  var $newCard = $('<div class="card col-xs-3 col-sm-3 col-md-3 col-lg-3"> </div>');
       $newCard.data('value', cardValues[i]);
       $newCard.data('isFlipped', false);
       $newCard.data('color', color[cardValues[i]-1]);
@@ -65,23 +65,27 @@ MatchGame.flipCard = function($card, $game) {
 
     return;
   }
+  
   var fCards = $game.data('flippedCards');
   $card.css('background-color', $card.data('color'));
   $card.text($card.data('value'));
   $card.data('isFlipped', true);
   $game.data('flippedCards').push($card);
      
+  
+
   if (fCards.length === 2) {
 
     if (fCards[0].data('value') === fCards[1].data('value')) {
       
-      fCards[0].css('background-color', rgb(153, 153, 153));
-      fCards[0].css('color', rgb(204, 204, 204));
-      fCards[1].css('background-color', rgb(153, 153, 153));
-      fCards[1].css('color', rgb(204, 204, 204));
+      fCards[0].css('background-color', 'rgb(153, 153, 153)');
+      fCards[0].css('color', 'rgb(204, 204, 204)');
+      fCards[1].css('background-color', 'rgb(153, 153, 153)');
+      fCards[1].css('color', 'rgb(204, 204, 204)');
     
     } else {
-
+      
+      setTimeout(function() {
       fCards[0].css('background-color', 'rgba(32, 64, 86)');
       fCards[0].text('');
       fCards[0].data('isFlipped', false);
@@ -89,7 +93,8 @@ MatchGame.flipCard = function($card, $game) {
       fCards[1].text('');
       fCards[1].data('isFlipped', false);
 
-    }
+    }, 450);
+   }
     $game.data('flippedCards', []);
   }
 
