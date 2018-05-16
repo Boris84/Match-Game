@@ -38,6 +38,7 @@ MatchGame.generateCardValues = function() {
 MatchGame.renderCards = function(cardValues, $game) {
   $game.empty();
   $game.data('flippedCards', []);
+  $game.data('pairsFound', 0);
   var color = ['hsl(25,85%,65%)','hsl(55,85%,65%)','hsl(90,85%,65%)','hsl(160,85%,65%)',
   'hsl(220,85%,65%)','hsl(265,85%,65%)','hsl(310,85%,65%)','hsl(360,85%,65%)'];
   for (var i = 0; i < cardValues.length;  i++) {
@@ -82,6 +83,13 @@ MatchGame.flipCard = function($card, $game) {
       fCards[0].css('color', 'rgb(204, 204, 204)');
       fCards[1].css('background-color', 'rgb(153, 153, 153)');
       fCards[1].css('color', 'rgb(204, 204, 204)');
+      var matches = $game.data('pairsFound');
+      $game.data('pairsFound', matches +1); 
+
+    }
+
+    if $game.data('pairsFound') === 8 {
+       alert('You Win!!');
     
     } else {
       
@@ -93,7 +101,7 @@ MatchGame.flipCard = function($card, $game) {
       fCards[1].text('');
       fCards[1].data('isFlipped', false);
 
-    }, 450);
+    }, 270);
    }
     $game.data('flippedCards', []);
   }
