@@ -83,16 +83,16 @@ MatchGame.flipCard = function($card, $game) {
       fCards[0].css('color', 'rgb(204, 204, 204)');
       fCards[1].css('background-color', 'rgb(153, 153, 153)');
       fCards[1].css('color', 'rgb(204, 204, 204)');
+      
       var matches = $game.data('pairsFound');
       $game.data('pairsFound', matches +1); 
 
-    }
 
-    if $game.data('pairsFound') === 8 {
-       alert('You Win!!');
-    
+    if ($game.data('pairsFound') === 8) { 
+       alert('YOU WIN!!');
+     }
     } else {
-      
+       
       setTimeout(function() {
       fCards[0].css('background-color', 'rgba(32, 64, 86)');
       fCards[0].text('');
