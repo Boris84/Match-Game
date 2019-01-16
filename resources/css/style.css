@@ -4,7 +4,7 @@ html {
 
 body {
 	font-family: "Work Sans", sans-serif;
-	background-color: #D2B48C;
+	background-color: #000;
 }
 
 .container {
@@ -15,7 +15,7 @@ h1,
  h4 {
 	font-size: 2.5rem;
     font-weight: bold;
-    color: rgba(32, 64, 86);
+    color: rgb(255,255,255);
 }
 
 h4 {
@@ -24,9 +24,12 @@ h4 {
 }
 
 p {
-    color: rgba(74, 74, 74);
+    color: rgb(255,255,255);
 }
 
+#p {
+	color: red;
+}
 
 .btn-primary {
     background-color: rgba(32, 64, 86);
