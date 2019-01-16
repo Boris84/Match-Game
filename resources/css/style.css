@@ -4,11 +4,12 @@ html {
 
 body {
 	font-family: "Work Sans", sans-serif;
-	background-color: rgba(255, 242, 242);
+	background-color: lightgreen;
 }
 
 .container {
      margin-top: 5.25rem;
+
 }
 
 h1,

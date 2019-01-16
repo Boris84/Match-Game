@@ -22,7 +22,6 @@ MatchGame.generateCardValues = function() {
   var roa = [];
   while (myCards.length > 0) {
     var randomIndex = Math.floor(Math.random() * myCards.length);
-    // var removePush = myCards.splice(randomIndex, 1)[0]; 
     roa.push(myCards[randomIndex]);
     myCards.splice(randomIndex, 1); 
   }
