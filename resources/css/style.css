@@ -4,7 +4,7 @@ html {
 
 body {
 	font-family: "Work Sans", sans-serif;
-	background-color: #FFC0CB;
+	background-color: #D2B48C;
 }
 
 .container {
@@ -32,7 +32,6 @@ p {
     background-color: rgba(32, 64, 86);
     transition: background-color 300ms ease-out;
 }
-
 
 #game .card {
 	height: 12.5rem;
